@@ -17,18 +17,17 @@ int main(int argc, char *argv[])
         }
     }
 
-
     int arvaus;
-    std::srand(std::time(0)); // Asetetaan siemenluku
+    std::srand(std::time(0)); // Asetetaan siemenluku, joka arvotaan ajan mukaan
 
     int luku = std::rand() % 20 + 1; // Arvotaan luku 1-20
     std::cout <<"Tervetuloa arvauspeliin"<<std::endl ;
 
-    while(true){
+    while(true){ //aloitetaan while loop jotta päästään takaisin jos arvaus ei ole oikea
     std::cout <<"Arvaa numero"<<std::endl;
-    std::cin >>arvaus;
+    std::cin >>arvaus; //kysytään käyttäjän arvaus
 
-    if (arvaus < luku){
+    if (arvaus < luku){ //verrataan lukuja
            std::cout <<"luku on suurempi"<<std::endl;
        // return 2;
         }
@@ -38,20 +37,9 @@ int main(int argc, char *argv[])
     }
     if(arvaus == luku){
         std::cout <<"oikea vastaus"<<std::endl;
-        break;
+        break; //pysäytetään loop jotta peli päättyy
     }
     }
-
-    // Set up code that uses the Qt event loop here.
-    // Call a.quit() or a.exit() to quit the application.
-    // A not very useful example would be including
-    // #include <QTimer>
-    // near the top of the file and calling
-    // QTimer::singleShot(5000, &a, &QCoreApplication::quit);
-    // which quits the application after 5 seconds.
-
-    // If you do not need a running Qt event loop, remove the call
-    // to a.exec() or use the Non-Qt Plain C++ Application template.
 
     return a.exec();
 }
