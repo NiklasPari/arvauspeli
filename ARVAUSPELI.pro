@@ -9,11 +9,6 @@ CONFIG += c++17 cmdline
 SOURCES += \
         main.cpp
 
-TRANSLATIONS += \
-    ARVAUSPELI_en_FI.ts
-CONFIG += lrelease
-CONFIG += embed_translations
-
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
